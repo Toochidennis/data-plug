@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">EInfinity</string>
+    <string name="app_name">eInfinity</string>
+    <string name="error_message">Oops! Something went wrong. Please check your internet connect and try again</string>
 </resources>
