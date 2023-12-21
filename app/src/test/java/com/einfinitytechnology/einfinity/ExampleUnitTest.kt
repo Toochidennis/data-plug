@@ -1,4 +1,4 @@
-package com.einfinitytechnology.dataplug
+package com.einfinitytechnology.einfinity
 
 import org.junit.Test
 
