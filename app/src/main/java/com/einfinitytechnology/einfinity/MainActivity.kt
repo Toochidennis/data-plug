@@ -1,4 +1,4 @@
-package com.einfinitytechnology.dataplug
+package com.einfinitytechnology.einfinity
 
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
@@ -16,12 +16,10 @@ import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
-    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
     private var doubleBackToExitPressedOnce = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,11 +30,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         webView = findViewById(R.id.webView)
-        swipeRefreshLayout = findViewById(R.id.swipeRefresh)
 
         loadUrl()
-
-        refreshPage()
 
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -68,13 +63,6 @@ class MainActivity : AppCompatActivity() {
             webChromeClient = MyWebChromeClient()
 
             loadUrl("https://eeinfinity.com.ng")
-        }
-    }
-
-    private fun refreshPage() {
-        swipeRefreshLayout.setOnRefreshListener {
-            loadUrl()
-            swipeRefreshLayout.isRefreshing = false
         }
     }
 
