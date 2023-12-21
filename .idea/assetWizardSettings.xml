@@ -80,7 +80,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\tooch\Downloads\logo.jpg" />
+                                                <entry key="imagePath" value="C:\Users\tooch\Downloads\playstore icon.jpg" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -284,6 +284,11 @@
                 </map>
               </option>
             </PersistentState>
+          </value>
+        </entry>
+        <entry key="vectorWizard">
+          <value>
+            <PersistentState />
           </value>
         </entry>
       </map>
