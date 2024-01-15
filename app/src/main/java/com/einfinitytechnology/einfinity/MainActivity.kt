@@ -96,8 +96,13 @@ class MainActivity : AppCompatActivity() {
             handler: SslErrorHandler?,
             error: SslError?
         ) {
-            // Handle SSL errors, you can decide to proceed or cancel the request
-            handler?.proceed()
+            val primaryError = error?.primaryError
+
+            if (primaryError == SslError.SSL_UNTRUSTED) {
+                handler?.cancel()
+            } else {
+                handler?.proceed()
+            }
         }
     }
 
